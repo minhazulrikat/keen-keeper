@@ -1,14 +1,14 @@
 "use client";
 
-import { Handshake, MessageCircle, Video } from "lucide-react";
+import { Phone, MessageCircle, Video } from "lucide-react";
 
 const interactions = [
   {
     id: 1,
-    type: "Meetup",
+    type: "Call",
     person: "Tom Baker",
     date: "March 29, 2026",
-    icon: Handshake,
+    icon: Phone ,
   },
   {
     id: 2,
@@ -19,10 +19,10 @@ const interactions = [
   },
   {
     id: 3,
-    type: "Meetup",
+    type: "Call",
     person: "Olivia Martinez",
     date: "March 26, 2026",
-    icon: Handshake,
+    icon: Phone,
   },
   {
     id: 4,
@@ -59,7 +59,7 @@ export default function Timeline() {
               Filter timeline
             </option>
             <option value="all">All interactions</option>
-            <option value="meetup">Meetups</option>
+            <option value="call">Call</option>
             <option value="text">Texts</option>
             <option value="video">Video calls</option>
           </select>

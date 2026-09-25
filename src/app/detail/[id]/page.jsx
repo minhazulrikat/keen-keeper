@@ -1,6 +1,3 @@
-// "use client";
-
-import CheckInButton from "@/Component/CheckInButton";
 import QuickCheckIn from "@/Component/QuickCheckIn";
 import StatCard from "@/Component/StatCard";
 import Image from "next/image";
@@ -15,9 +12,6 @@ export default async function FriendDetails({ params }) {
   const friends = await res.json();
   const friend = friends.find((data) => data.id === parseInt(id));
 
-  const handleTimeLine = (type) => {
-    console.log("button clicked");
-  };
 
   return (
     <main className="min-h-screen mx-auto max-w-7xl px-4 py-6 sm:py-10">
@@ -103,7 +97,7 @@ export default async function FriendDetails({ params }) {
           </div>
 
           {/* Quick Check-In */}
-         <QuickCheckIn></QuickCheckIn>
+         <QuickCheckIn friend={friend}></QuickCheckIn>
         </section>
       </div>
     </main>

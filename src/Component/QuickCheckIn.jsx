@@ -2,10 +2,10 @@
 
 import CheckInButton from "./CheckInButton";
 
-export default function QuickCheckIn() {
+export default function QuickCheckIn({friend}) {
 
-  const handleTimeline = () => {
-    console.log("Timeline updated");
+  const handleTimeline = (type) => {
+    console.log("Timeline updated",type,friend);
   };
 
   return (
@@ -18,15 +18,15 @@ export default function QuickCheckIn() {
 
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
 
-          <div onClick={handleTimeline} className="w-full">
+          <div onClick={()=> handleTimeline("Call")} className="w-full">
             <CheckInButton label="Call" />
           </div>
 
-          <div onClick={handleTimeline} className="w-full">
+          <div onClick={()=> handleTimeline("Text")} className="w-full">
             <CheckInButton label="Text" />
           </div>
 
-          <div onClick={handleTimeline} className="w-full">
+          <div onClick={()=> handleTimeline("Video")} className="w-full">
             <CheckInButton label="Video" />
           </div>
 
