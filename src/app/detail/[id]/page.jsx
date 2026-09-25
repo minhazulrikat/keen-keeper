@@ -1,4 +1,7 @@
+// "use client";
+
 import CheckInButton from "@/Component/CheckInButton";
+import QuickCheckIn from "@/Component/QuickCheckIn";
 import StatCard from "@/Component/StatCard";
 import Image from "next/image";
 import { BsArchive } from "react-icons/bs";
@@ -7,10 +10,14 @@ import { MdOutlineDeleteOutline } from "react-icons/md";
 
 export default async function FriendDetails({ params }) {
   const { id } = await params;
- 
+
   const res = await fetch("http://localhost:3000/friends.json");
   const friends = await res.json();
-  const friend =  friends.find((data) => data.id === parseInt(id));
+  const friend = friends.find((data) => data.id === parseInt(id));
+
+  const handleTimeLine = (type) => {
+    console.log("button clicked");
+  };
 
   return (
     <main className="min-h-screen mx-auto max-w-7xl px-4 py-6 sm:py-10">
@@ -49,7 +56,7 @@ export default async function FriendDetails({ params }) {
 
           {/* Actions */}
           <button className="btn btn-sm h-10 w-full bg-base-100 text-sm font-normal shadow-sm">
-            <HiOutlineBellSnooze/> Snooze 2 Weeks
+            <HiOutlineBellSnooze /> Snooze 2 Weeks
           </button>
 
           <button className="btn btn-sm h-10 w-full bg-base-100 text-sm font-normal shadow-sm">
@@ -96,21 +103,7 @@ export default async function FriendDetails({ params }) {
           </div>
 
           {/* Quick Check-In */}
-          <div className="card bg-base-100 shadow-sm">
-            <div className="card-body p-4 sm:p-5">
-              <h2 className="text-sm font-medium text-primary sm:text-base">
-                Quick Check-In
-              </h2>
-
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-                <CheckInButton  label="Call" />
-
-                <CheckInButton  label="Text" />
-
-                <CheckInButton  label="Video" />
-              </div>
-            </div>
-          </div>
+         <QuickCheckIn></QuickCheckIn>
         </section>
       </div>
     </main>
