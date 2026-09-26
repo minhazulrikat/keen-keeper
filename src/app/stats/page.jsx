@@ -6,7 +6,7 @@ import { useInteractions } from "@/Context/InteractionContext";
 export default function Stats() {
   const {interactions} = useInteractions();
   return (
-    <main className="min-h-screen bg-base-200 px-4 py-8 sm:px-6 lg:py-10">
+    <main className="min-h-[50vh] bg-base-200 px-4 py-8 sm:px-6 lg:py-10">
       <div className="mx-auto max-w-5xl">
 
         <div className="mb-4">
