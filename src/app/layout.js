@@ -33,7 +33,8 @@ export default function RootLayout({ children }) {
          {children}
        </main>
         <Footer/>
-         <ToastContainer />
+         <ToastContainer position="top-right"
+autoClose={2000} />
       </InteractionProvider>
         </body>
     </html>
