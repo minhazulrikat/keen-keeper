@@ -5,7 +5,20 @@
 @plugin "daisyui/theme" {
   name: "keenkeeper";
   default: true;
+  prefersdark: false;
+  color-scheme: light;
 
   --color-primary: #244D3F;
   --color-primary-content: #ffffff;
+
+  --color-secondary: #6B8F7B;
+  --color-secondary-content: #ffffff;
+
+  --color-accent: #D9A441;
+  --color-accent-content: #1F2937;
+
+  --color-base-100: #FFFFFF;
+  --color-base-200: #F6F8F7;
+  --color-base-300: #E5EAE7;
+  --color-base-content: #1F2937;
 }
