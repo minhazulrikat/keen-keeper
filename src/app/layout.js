@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
             position="bottom-left"
             autoClose={1000}
             hideProgressBar
-            newestOnTop={false}
+            newestOnTop
             closeOnClick
             rtl={false}
             pauseOnFocusLoss
