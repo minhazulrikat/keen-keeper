@@ -7,6 +7,7 @@ export const InteractionProvider = ({ children }) => {
   const [interactions, setInteractions] = useState([]);
 
   const addInteraction = ({ friendId, person, type }) => {
+    console.log(friendId,person,type,"from context")
     const newInteraction = {
       id: Date.now(),
       friendId,

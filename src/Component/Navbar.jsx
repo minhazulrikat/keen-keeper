@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="navbar mx-auto container px-4 ">
         <div className="flex-1">
           <a className="text-base font-bold text-base-content md:text-3xl">
-            Adiyat<span className="text-primary">Keeper</span>
+            Keen<span className="text-primary">Keeper</span>
           </a>
         </div>
 

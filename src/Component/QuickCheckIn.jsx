@@ -1,11 +1,18 @@
 "use client";
 
+import { useInteractions } from "@/Context/InteractionContext";
 import CheckInButton from "./CheckInButton";
 
 export default function QuickCheckIn({friend}) {
+    const {name,id} = friend;
+    
+ const {addInteraction} = useInteractions();
 
   const handleTimeline = (type) => {
-    console.log("Timeline updated",type,friend);
+  const friendId = id;
+  const person = name;
+  addInteraction({friendId,person,type})
+  console.log("from quickcheck:", id, name , type)
   };
 
   return (
