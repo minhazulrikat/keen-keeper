@@ -8,10 +8,9 @@ import { MdOutlineDeleteOutline } from "react-icons/md";
 export default async function FriendDetails({ params }) {
   const { id } = await params;
 
-  // const res = await fetch("https://keen-keeper-beige/friends.json");
-  // const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
-  // const friends = await res.json();
-  const friends = [];
+  const res = await fetch("https://keen-keeper-beige.vercel.app/friends.json");
+  const friends = await res.json();
+ 
   const friend = friends.find((data) => data.id === parseInt(id));
 
 
