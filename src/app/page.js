@@ -3,8 +3,9 @@ import Hero from "@/Component/Hero";
 import StatCard from "@/Component/StatCard";
 
 export default async function Home() {
-  const res = await fetch("http://localhost:3000/friends.json");
-  const friends = await res.json();
+  // const res = await fetch("http://localhost:3000/friends.json");
+  // const friends = await res.json();
+  const friends = [];
   return (
     <div className="font-sans mx-auto max-w-7xl px-4">
       <Hero></Hero>
