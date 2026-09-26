@@ -10,7 +10,7 @@ export default function QuickCheckIn({ friend }) {
   const { addInteraction } = useInteractions();
 
   const handleTimeline = (type) => {
-    toast.success(`${type} logged successfully!` );
+    toast.success(`${type === "Video"? "Video Call" : type} logged successfully!` );
    
 
     const friendId = id;

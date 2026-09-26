@@ -1,22 +1,20 @@
+import { House, RotateCwClock , ChartLine} from "lucide-react";
 import NavLink from "./NavLink";
 
 const Navbar = () => {
   const link = (
     <>
       <NavLink href={"/"} >
-        <li>
-          Home
-        </li>
+       
+         <span className="flex gap-1 items-center"> <House size={14} /> Home</span>
+  
       </NavLink>
       <NavLink href={"/timeline"}>
-        <li>
-          Timeline
-        </li>
+      <span className="flex gap-1 items-center"> <RotateCwClock size={14} /> Timeline </span>
+        
       </NavLink>
       <NavLink href={"/stats"}>
-        <li>
-         Stats
-        </li>
+      <span className="flex gap-1 items-center"> <ChartLine size={14} /> Stats </span>
       </NavLink>
     </>
   );
