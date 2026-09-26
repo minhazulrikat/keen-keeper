@@ -69,9 +69,9 @@ const sortedInteractions  = [...searchedInteractions].sort((a,b)=>{
           </div>
         </div>
 
-        {sortedInteractions.length === 0 ? (
-          <EmptyState></EmptyState>
-        ) : (
+        {filteredInteractions.length === 0 ? (
+          <EmptyState ></EmptyState>
+        ) : sortedInteractions.length === 0 ?  <EmptyState title="No Results Found" description="We couldn't find any interactions matching your search. Try a different name or check your spelling and try again."></EmptyState> : (
           <div className="space-y-3">
             {sortedInteractions.map((interaction,index) => {
               const Icon =
