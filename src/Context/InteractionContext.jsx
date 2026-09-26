@@ -13,11 +13,7 @@ export const InteractionProvider = ({ children }) => {
       friendId,
       person,
       type,
-      date: new Date().toLocaleDateString("en-US", {
-        month: "long",
-        day: "numeric",
-        year: "numeric",
-      }),
+      date: new Date().toISOString(),
     };
 
     setInteractions((prev) => [newInteraction, ...prev]);
