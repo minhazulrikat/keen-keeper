@@ -17,16 +17,18 @@ export default function Timeline() {
       : interactions.filter(
           (interaction) => interaction.type.toLowerCase() === filter,
         );
-        
-const searchedInteractions = filteredInteractions.filter((item) =>
-  item.person.toLowerCase().includes(searchText.toLowerCase())||  item.type.toLowerCase().includes(searchText.toLowerCase())
-);
 
-const sortedInteractions  = [...searchedInteractions].sort((a,b)=>{
-  return sortOrder === "newest" ? new Date (b.date) - new Date(a.date) :new Date(a.date) - new Date (b.date);
-});
+  const searchedInteractions = filteredInteractions.filter(
+    (item) =>
+      item.person.toLowerCase().includes(searchText.toLowerCase()) ||
+      item.type.toLowerCase().includes(searchText.toLowerCase()),
+  );
 
- 
+  const sortedInteractions = [...searchedInteractions].sort((a, b) => {
+    return sortOrder === "newest"
+      ? new Date(b.date) - new Date(a.date)
+      : new Date(a.date) - new Date(b.date);
+  });
 
   return (
     <main className="min-h-[70vh] bg-base-200 px-4 py-8 sm:px-6 lg:py-10">
@@ -61,26 +63,35 @@ const sortedInteractions  = [...searchedInteractions].sort((a,b)=>{
           >
             <option value="newest">Newest</option>
             <option value="oldest">Oldest</option>
-          
           </select>
           <div className="sm:flex-2 flex items-center gap-2">
-            <input type="text" placeholder="Search" className="input outline-none input-sm" value={searchText} onChange={(e)=>setSearchText(e.target.value)}/>
-            
+            <input
+              type="text"
+              placeholder="Search"
+              className="input outline-none input-sm"
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+            />
           </div>
         </div>
 
         {filteredInteractions.length === 0 ? (
-          <EmptyState ></EmptyState>
-        ) : sortedInteractions.length === 0 ?  <EmptyState title="No Results Found" description="We couldn't find any interactions matching your search. Try a different name or check your spelling and try again."></EmptyState> : (
+          <EmptyState></EmptyState>
+        ) : sortedInteractions.length === 0 ? (
+          <EmptyState
+            title="No Results Found"
+            description="We couldn't find any interactions matching your search. Try a different name or check your spelling and try again."
+          ></EmptyState>
+        ) : (
           <div className="space-y-3">
-            {sortedInteractions.map((interaction,index) => {
+            {sortedInteractions.map((interaction, index) => {
               const Icon =
                 interaction.type === "Call"
                   ? Phone
                   : interaction.type === "Text"
                     ? MessageCircle
                     : Video;
-      return (
+              return (
                 <article
                   key={interaction.id}
                   className="card border border-base-300 bg-base-100 shadow-sm transition hover:shadow-md"

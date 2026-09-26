@@ -9,7 +9,7 @@ const NavLink = ({ href, children }) => {
   return (
     <Link
       href={href}
-      className={`btn  btn-sm ${isActive ? " btn-primary " : " btn-ghost "}`}
+      className={`btn md:btn-md btn-sm ${isActive ? " btn-primary " : " btn-ghost "}`}
     >
       {children}
     </Link>

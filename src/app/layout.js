@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "@/Component/Navbar";
 import Footer from "@/Component/Footer";
 import { InteractionProvider } from "@/Context/InteractionContext";
-import { ToastContainer } from "react-toastify";
+import { Slide, ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,16 +27,25 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-      <InteractionProvider>
-        <Navbar></Navbar>
-         <main className="bg-base-200" >
-         {children}
-       </main>
-        <Footer/>
-         <ToastContainer position="top-center"
-autoClose={2000} />
-      </InteractionProvider>
-        </body>
+        <InteractionProvider>
+          <Navbar></Navbar>
+          <main className="bg-base-200">{children}</main>
+          <Footer />
+          <ToastContainer
+            position="bottom-left"
+            autoClose={1000}
+            hideProgressBar
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+            transition={Slide}
+          />
+        </InteractionProvider>
+      </body>
     </html>
   );
 }

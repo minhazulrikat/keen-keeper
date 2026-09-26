@@ -21,7 +21,7 @@ export default async function FriendDetails({ params }) {
 
 
   return (
-    <main className="min-h-screen mx-auto max-w-7xl px-4 py-6 sm:py-10">
+    <main className="min-h-[70vh] mx-auto max-w-7xl px-4 py-6 sm:py-10">
       <div className="mx-auto grid max-w-5xl gap-4 lg:grid-cols-[220px_1fr]">
         {/* LEFT — Profile */}
         <section className="space-y-3">
