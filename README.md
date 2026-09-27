@@ -4,7 +4,7 @@ A modern friendship management application that helps you stay connected with th
 
 Built with Next.js, KeenKeeper helps users track friends, log interactions, monitor relationship goals, and review communication history through a clean, responsive interface.
 
-**Live Demo:** [keen-keeper-beige.vercel.app](https://keen-keeper-beige.vercel.app/)
+**Live Demo:** [keen-keeper-beige.vercel.app](https://keen-keeper-beige.vercel.app/) <br/>
 **Repository:** [github.com/minhazulrikat/keen-keeper](https://github.com/minhazulrikat/keen-keeper.git)
 
 ---
