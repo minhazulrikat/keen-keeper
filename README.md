@@ -144,7 +144,8 @@ npm start
 
 Built as a practical frontend project to strengthen React and Next.js skills — App Router, Server/Client Components, Context API, dynamic routing, data visualization, and loading/error handling — with an emphasis on real interactive user flows over static UI.
 
-**Author:** Minhazul Islam Rikat — Jr. Frontend Developer
-GitHub: [@minhazulrikat](https://github.com/minhazulrikat) · LinkedIn: [Minhazul Rikat](https://linkedin.com/in/minhazulrikat)
+**Author:** Minhazul Islam Rikat — Jr. Frontend Developer <br/>
+- GitHub: [@minhazulrikat](https://github.com/minhazulrikat) <br/> 
+- LinkedIn: [Minhazul Rikat](https://linkedin.com/in/minhazulrikat)
 
 **License:** For learning and portfolio purposes.
