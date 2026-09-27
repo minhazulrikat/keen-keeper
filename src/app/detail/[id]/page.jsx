@@ -1,6 +1,7 @@
 import QuickCheckIn from "@/Component/QuickCheckIn";
 import StatCard from "@/Component/StatCard";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import { BsArchive } from "react-icons/bs";
 import { HiOutlineBellSnooze } from "react-icons/hi2";
 import { MdOutlineDeleteOutline } from "react-icons/md";
@@ -13,10 +14,8 @@ export default async function FriendDetails({ params }) {
  
   const friend = friends.find((data) => data.id === parseInt(id));
 
-  if(Number(id)> friends.length){
-    throw new Response("Page not found",{
-      status:404,
-    })
+  if(!friend){
+    notFound();
   }
 
 
